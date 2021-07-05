@@ -1,19 +1,21 @@
-
 @forward 'wrapper';
 
 // Con la linea de abajo si puedo usar lo del wrapper aca, con el forward el que esta usando @use tiene acceso a _globals y a _wrapper
 //@use 'wrapper';
-$font-size: 62.5%;
-// Mantiene un equilibrio, para pasar a una fuente más grande, multiplicar el ultimo font-size por la proporcion aure al igual que su line-heigh y asi...
-$proporcion-aurea: 1.618;
-$font-family: "Noto Sans JP", sans-serif;
+
+@use 'fuente';
+@use 'color';
+@use 'boton';
+
+
 
 
 html {
     /* Si el navegador por defecto tiene la fuente a 16px, y nadie le cambio el tamaño para visualizar mejor, va a realizar
     el siguiente calculo dando como resultado inicial 10px, dependiendo si se cambia (62.5/100)*16 = 10px */
     /* Esto tambien facilita que al decir por eje 1.6rem equivaldria a 16px, para mejor lectura . 1rem = 10px , si es que no se cambia el tamañao de la fuente del navegador por motivos de discapacidad, etc*/
-    font-size: $font-size;
+    font-size: fuente.$size;
+        line-height: fuente.$line-height;
     // border box no toca el margin solo contenido, relleno y bordes
     box-sizing: border-box;
 }
@@ -30,18 +32,32 @@ html {
 /* el body tiene prioridad sobre el selector * , sobreescribe lo que se quiere  */
 body {
     margin: 0;
-    line-height: $font-size * $proporcion-aurea;
-    font-family: $font-family;
+
+    font-family: fuente.$family;
 }
 
-img{
+img {
     width: 80%;
     height: auto;
 }
 
-// contenedores
-
-nav, .servicios, .presentacion, .footer-content{
-    width: 80%;
-    margin: auto;
+p{
+    font-size: fuente.$size-p;
+    line-height: fuente.$line-height-p;
+    color: color.$gris;
 }
+
+h2{
+    font-size: fuente.$size-h2;
+}
+
+h3{
+    font-size: fuente.$size-h3;
+   // Letra más delgada
+    font-weight: lighter;
+}
+
+
+
+
+

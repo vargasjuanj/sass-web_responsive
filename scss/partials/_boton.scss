@@ -1,0 +1,24 @@
+@use 'color';
+
+.boton{
+    border: none;
+    border-radius: 0.2rem;
+    padding-inline: 1.5rem;
+    padding-block: 0.7rem;
+    cursor: pointer;
+    margin-inline-end: 1rem;
+    margin-block-end: 1.5rem;
+    font-weight: 500;
+}
+
+
+.boton--principal{
+    @extend .boton;
+    color: color.$blanco;
+    background-color: color.$boton-principal;
+}
+
+.boton--secundario{
+    @extend .boton;
+    background-color: color.$gris;
+}

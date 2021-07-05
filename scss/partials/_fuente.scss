@@ -1,0 +1,26 @@
+// Mantiene un equilibrio, para pasar a una fuente más grande, multiplicar el ultimo font-size por la proporcion aure al igual que su line-heigh y asi...
+$proporcion-aurea: 1.618;
+
+// Principal
+$size: 62.5%;
+$line-height: espacioEntreLineas($size);
+$family: "Noto Sans JP", sans-serif;
+
+
+$size-p: 1.8rem;
+$line-height-p: espacioEntreLineas($size-p);
+
+
+
+$size-h1: 3.0rem; // 30 px relativa
+$line-height-p: espacioEntreLineas($size-h1);
+$size-h2: 2.4rem;
+$line-height-p: espacioEntreLineas($size-h2);
+$size-h3: 2.0rem;
+$line-height-p: espacioEntreLineas($size-h3);
+
+
+@function espacioEntreLineas($font-size) {
+    $result: $font-size * $proporcion-aurea;
+    @return $result;
+}
