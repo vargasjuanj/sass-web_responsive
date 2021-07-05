@@ -1,0 +1,37 @@
+        // USAR CON NODE, SE PUEDE USAR DART SASS, QUE INTEGRA USE Y FORWARD
+
+// compilar 
+ sass --watch scss/main.scss css/main.css
+
+// compilar con minificación o minimizacion
+
+
+
+ sass --watch -s compressed scss/main.scss css/main.min.css
+
+// sobre extension .map.css https://stackoverflow.com/questions/21504611/what-are-the-map-files-used-for-in-bootstrap-3-x
+
+                        // USAR CON LIVE SASS
+// ir a configuracion, buscar live sass y pegar en setting.json donde comienza la configuracion de sass
+
+   "liveSassCompile.settings.autoprefix": [],
+    "liveSassCompile.settings.includeItems": [],
+    "liveSassCompile.settings.formats": [
+        {
+        "format": "expanded",
+        // "format": "compact",
+        // "format": "compressed",
+         // "format": "nested",
+        "extensionName": ".css",
+        // "extensionName": ".min.css",
+        "savePath":"/css"
+        }
+    ],
+    "liveSassCompile.settings.generateMap": false,
+    "editor.mouseWheelZoom": true , 
+    "liveSassCompile.settings.excludeList": [
+        "**/node_modules/**",
+       ".vscode/**"
+     ]
+    
+    

@@ -1,0 +1,32 @@
+
+
+$font-size: 62.5%;
+// Mantiene un equilibrio, para pasar a una fuente más grande, multiplicar el ultimo font-size por la proporcion aure al igual que su line-heigh y asi...
+$proporcion-aurea: 1.618;
+$font-family: "Noto Sans JP", sans-serif;
+
+
+html {
+    /* Si el navegador por defecto tiene la fuente a 16px, y nadie le cambio el tamaño para visualizar mejor, va a realizar
+    el siguiente calculo dando como resultado inicial 10px, dependiendo si se cambia (62.5/100)*16 = 10px */
+    /* Esto tambien facilita que al decir por eje 1.6rem equivaldria a 16px, para mejor lectura . 1rem = 10px , si es que no se cambia el tamañao de la fuente del navegador por motivos de discapacidad, etc*/
+    font-size: $font-size;
+    // border box no toca el margin solo contenido, relleno y bordes
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    // Selectores de elementos comienzan con :: , lo que está antes o después. Sirve para agregar contenido antes o despues o posicionar alguna caja personalizada
+    // hereda propiedades, si se quiere de la etiqueta html
+    // Si coloco el border-box en el selector html, no sirve, pero las otras propiedades si
+    box-sizing: inherit;
+}
+
+/* el body tiene prioridad sobre el selector * , sobreescribe lo que se quiere  */
+body {
+    margin: 0;
+    line-height: $font-size * $proporcion-aurea;
+    font-family: $font-family;
+}
