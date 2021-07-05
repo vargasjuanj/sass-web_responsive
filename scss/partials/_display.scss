@@ -1,0 +1,12 @@
+/* 
+A diferencia de los extends o funciones, el mixin son propiedades que pueden reciir parametros
+*/
+
+@mixin flex($eje-principal, $eje-cruzado, $wrap: nowrap, $direccion: row, $separacion: 0) {
+    display: flex;
+    justify-content: $eje-principal;
+    align-items: $eje-cruzado;
+    flex-wrap: $wrap;
+    flex-direction: $direccion;
+    gap: $separacion;
+}

@@ -2,10 +2,10 @@
 
 // Con la linea de abajo si puedo usar lo del wrapper aca, con el forward el que esta usando @use tiene acceso a _globals y a _wrapper
 //@use 'wrapper';
-
-@use 'fuente';
 @use 'color';
-@use 'boton';
+@use 'fuente';
+
+
 
 html {
     /* Si el navegador por defecto tiene la fuente a 16px, y nadie le cambio el tamaño para visualizar mejor, va a realizar
@@ -39,32 +39,3 @@ img {
     height: auto;
 }
 
-p {
-    font-size: fuente.$size-p;
-    line-height: fuente.$line-height-p;
-    color: color.$gris;
-}
-
-h1 {
-    font-size: fuente.$size-h1;
-}
-
-h2 {
-    font-size: fuente.$size-h2;
-}
-
-h3 {
-    font-size: fuente.$size-h3;
-    // Letra más delgada
-    font-weight: lighter;
-}
-/* 
-A diferencia de los extends o funciones, el mixin son propiedades que pueden reciir parametros
-*/
-
-@mixin caja-flex($principal, $cruzado, $wrap) {
-    display: flex;
-    justify-content: $principal;
-    align-items: $cruzado;
-    flex-wrap: $wrap;
-}

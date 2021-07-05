@@ -1,3 +1,5 @@
+@use 'color';
+
 // Mantiene un equilibrio, para pasar a una fuente más grande, multiplicar el ultimo font-size por la proporcion aure al igual que su line-heigh y asi...
 $proporcion-aurea: 1.618;
 
@@ -23,4 +25,24 @@ $line-height-p: espacio-entre-lineas($size-h3);
 @function espacio-entre-lineas($font-size) {
     $result: $font-size * $proporcion-aurea;
     @return $result;
+}
+
+p {
+    font-size: $size-p;
+    line-height: $line-height-p;
+    color: color.$gris;
+}
+
+h1 {
+    font-size: $size-h1;
+}
+
+h2 {
+    font-size: $size-h2;
+}
+
+h3 {
+    font-size: $size-h3;
+    // Letra más delgada
+    font-weight: lighter;
 }

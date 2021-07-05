@@ -18,7 +18,7 @@
 
 .boton--principal{
     @extend .boton;
-    @include color-boton(color.$boton-principal, color.$blanco);
+    @include color-boton(color.$principal, color.$blanco);
 
 }
 
