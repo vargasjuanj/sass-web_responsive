@@ -2,23 +2,28 @@
 
 .boton{
     border: none;
-    border-radius: 0.2rem;
-    padding-inline: 1.5rem;
-    padding-block: 0.7rem;
+    border-radius: 2rem;
+    padding-inline: 15rem;
+    padding-block: 7rem;
     cursor: pointer;
     margin-inline-end: 1rem;
-    margin-block-end: 1.5rem;
+    margin-block-end: 15rem;
     font-weight: 500;
 }
 
+@mixin color-boton ($fondo, $texto: color.$negro ){
+    color: $texto;
+    background-color: $fondo;
+}
 
 .boton--principal{
     @extend .boton;
-    color: color.$blanco;
-    background-color: color.$boton-principal;
+    @include color-boton(color.$boton-principal, color.$blanco);
+
 }
 
 .boton--secundario{
     @extend .boton;
-    background-color: color.$gris;
+    @include color-boton(color.$gris);
+
 }

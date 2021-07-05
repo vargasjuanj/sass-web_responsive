@@ -7,15 +7,12 @@
 @use 'color';
 @use 'boton';
 
-
-
-
 html {
     /* Si el navegador por defecto tiene la fuente a 16px, y nadie le cambio el tamaño para visualizar mejor, va a realizar
     el siguiente calculo dando como resultado inicial 10px, dependiendo si se cambia (62.5/100)*16 = 10px */
     /* Esto tambien facilita que al decir por eje 1.6rem equivaldria a 16px, para mejor lectura . 1rem = 10px , si es que no se cambia el tamañao de la fuente del navegador por motivos de discapacidad, etc*/
-    font-size: fuente.$size;
-        line-height: fuente.$line-height;
+    font-size: fuente.$size; // 1rem = 1px
+    line-height: fuente.$line-height;
     // border box no toca el margin solo contenido, relleno y bordes
     box-sizing: border-box;
 }
@@ -34,6 +31,7 @@ body {
     margin: 0;
 
     font-family: fuente.$family;
+    background: url("../../img/fondo.png");
 }
 
 img {
@@ -41,23 +39,32 @@ img {
     height: auto;
 }
 
-p{
+p {
     font-size: fuente.$size-p;
     line-height: fuente.$line-height-p;
     color: color.$gris;
 }
 
-h2{
+h1 {
+    font-size: fuente.$size-h1;
+}
+
+h2 {
     font-size: fuente.$size-h2;
 }
 
-h3{
+h3 {
     font-size: fuente.$size-h3;
-   // Letra más delgada
+    // Letra más delgada
     font-weight: lighter;
 }
+/* 
+A diferencia de los extends o funciones, el mixin son propiedades que pueden reciir parametros
+*/
 
-
-
-
-
+@mixin caja-flex($principal, $cruzado, $wrap) {
+    display: flex;
+    justify-content: $principal;
+    align-items: $cruzado;
+    flex-wrap: $wrap;
+}

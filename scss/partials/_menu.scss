@@ -1,11 +1,23 @@
 @use 'color';
-.menu__lista{
-list-style-type: none;
+
+.menu{
+    position: fixed;
+    top: 0;
+    border-block-end: 30rem;
+
 }
 
-.menu__enlace{
+.menu__lista {
+    list-style-type: none;
+}
+
+.menu__enlace {
     text-decoration: none;
     display: inline-block;
     color: color.$gris;
-    
+}
+
+.menu__logo{
+    inline-size: 100rem;
+    block-size: 20rem;
 }

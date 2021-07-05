@@ -2,25 +2,25 @@
 $proporcion-aurea: 1.618;
 
 // Principal
-$size: 62.5%;
-$line-height: espacioEntreLineas($size);
+$size: 6.25%; // generalmente se usa 62.5% que equivale a 10px, es decir 1rem=10px, pero si directamente fuera igual a 1px, el entendimiento sería mejor 
+$line-height: espacio-entre-lineas($size);
 $family: "Noto Sans JP", sans-serif;
 
 
-$size-p: 1.8rem;
-$line-height-p: espacioEntreLineas($size-p);
+$size-p: 18rem;
+$line-height-p: espacio-entre-lineas($size-p);
 
 
 
-$size-h1: 3.0rem; // 30 px relativa
-$line-height-p: espacioEntreLineas($size-h1);
-$size-h2: 2.4rem;
-$line-height-p: espacioEntreLineas($size-h2);
-$size-h3: 2.0rem;
-$line-height-p: espacioEntreLineas($size-h3);
+$size-h1: 30rem; // 30 px relativa
+$line-height-p: espacio-entre-lineas($size-h1);
+$size-h2: 24rem;
+$line-height-p: espacio-entre-lineas($size-h2);
+$size-h3: 20rem;
+$line-height-p: espacio-entre-lineas($size-h3);
 
 
-@function espacioEntreLineas($font-size) {
+@function espacio-entre-lineas($font-size) {
     $result: $font-size * $proporcion-aurea;
     @return $result;
 }
