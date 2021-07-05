@@ -1,5 +1,8 @@
 
+@forward 'wrapper';
 
+// Con la linea de abajo si puedo usar lo del wrapper aca, con el forward el que esta usando @use tiene acceso a _globals y a _wrapper
+//@use 'wrapper';
 $font-size: 62.5%;
 // Mantiene un equilibrio, para pasar a una fuente más grande, multiplicar el ultimo font-size por la proporcion aure al igual que su line-heigh y asi...
 $proporcion-aurea: 1.618;
@@ -29,4 +32,16 @@ body {
     margin: 0;
     line-height: $font-size * $proporcion-aurea;
     font-family: $font-family;
+}
+
+img{
+    width: 80%;
+    height: auto;
+}
+
+// contenedores
+
+nav, .servicios, .presentacion, .footer-content{
+    width: 80%;
+    margin: auto;
 }
