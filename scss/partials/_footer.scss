@@ -8,5 +8,11 @@
     @include display.flex(center, center);
     &__contenido {
         text-align: center;
+        
+        // con rem no funca la media query
+        @media (min-width: 1400px){
+            inline-size: 60%;
+            margin: auto;
+        }
     }
 }

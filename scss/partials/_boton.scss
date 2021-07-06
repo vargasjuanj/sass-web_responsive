@@ -9,16 +9,24 @@
     margin-inline-end: 1rem;
     margin-block-end: 15rem;
     font-weight: 500;
+
+    // para que el hoover no sea brusco, es decir la transicion a otra escala 
+    transition: transform 100ms;
+
+    &:hover{
+        transform: scale(1.1);
+    }
 }
 
+/* 
+A diferencia de los extends o funciones, el mixin son propiedades que pueden reciir parametros
+Deben ir antes de las intrucciones que lo utilicen
+*/
 @mixin color-boton ($fondo, $texto: color.$negro ){
     color: $texto;
     background-color: $fondo;
 }
 
-/* 
-A diferencia de los extends o funciones, el mixin son propiedades que pueden reciir parametros
-*/
 
 .boton--principal{
     @extend .boton;

@@ -6,12 +6,21 @@
     div {
         text-align: center;
     }
-    &__tipo{
+    &__tipo {
         @include display.flex(center, center);
 
-        i{
+        i {
             font-size: fuente.$size-h1;
-        color: color.$principal;
+            color: color.$principal;
         }
+
+        @media (max-width: 992px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        inline-size: 60%;
+        margin: auto;
     }
 }

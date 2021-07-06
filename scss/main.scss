@@ -1,5 +1,4 @@
-// Deben ir los @use por encima del import de google fonts si no salta error
-@use 'partials/global'; // glogal incluye wrapper a través de @forward
+@use 'partials/global'; // global incluye wrapper a través de @forward
 @use 'partials/menu';
 @use 'partials/boton';
 @use 'partials/presentacion';
@@ -8,5 +7,4 @@
 @use 'partials/footer';
 
 
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
 

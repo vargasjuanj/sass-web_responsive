@@ -2,10 +2,13 @@
 
 // Con la linea de abajo si puedo usar lo del wrapper aca, con el forward el que esta usando @use tiene acceso a _globals y a _wrapper
 //@use 'wrapper';
+
+// Deben ir los @use por encima del import de google fonts si no salta error
+
 @use 'color';
 @use 'fuente';
 
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
 
 html {
     /* Si el navegador por defecto tiene la fuente a 16px, y nadie le cambio el tamaño para visualizar mejor, va a realizar
@@ -38,4 +41,3 @@ img {
     width: 80%;
     height: auto;
 }
-

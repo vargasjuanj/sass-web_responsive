@@ -5,17 +5,38 @@
     padding-block-end: 50rem;
     @include display.flex(space-between, center);
 
-   &__item2{
-    text-align: center; // centra la imagen en su espacio
-   }
-   h1{
-       margin-block-start: 0;
-       padding-inline-end: 20rem;
-   }
+    &__item2 {
+        text-align: center; // centra la imagen en su espacio
+    }
+    h1 {
+        margin-block-start: 0;
+        padding-inline-end: 20rem;
+    }
 
-   p{
-    padding-inline-end: 20rem;
-    padding-block-end: 10rem;
-
-   }
+    p {
+        padding-inline-end: 20rem;
+        padding-block-end: 10rem;
+    }
+    @media (max-width: 420px) {
+        
+        & div {
+            text-align: center;
+            margin-block-end: 30rem;
+            h1,
+            p {
+                padding: 0;
+            }
+        }
+    }
+    @media (max-width: 992px) {
+        flex-wrap: wrap;
+        & div {
+            text-align: center;
+            margin-block-end: 30rem;
+        }
+    }
+    @media (min-width: 1400px) {
+        inline-size: 60%;
+        margin: auto;
+    }
 }
