@@ -29,13 +29,13 @@ Deben ir antes de las intrucciones que lo utilicen
 
 
 .boton--principal{
-    @extend .boton;
+    //@extend .boton; // es innecesario el extend porque es solo un modificador esto, ya de por si con que el elemento tenga la clase boton, ya tiene esas propiedades
     @include color-boton(color.$principal, color.$blanco);
 
 }
 
 .boton--secundario{
-    @extend .boton;
+    //@extend .boton; 
     @include color-boton(color.$gris);
 
 }
