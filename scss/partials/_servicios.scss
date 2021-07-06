@@ -1,0 +1,17 @@
+@use 'display';
+@use 'fuente';
+@use 'color';
+
+.servicios {
+    div {
+        text-align: center;
+    }
+    &__tipo{
+        @include display.flex(center, center);
+
+        i{
+            font-size: fuente.$size-h1;
+        color: color.$principal;
+        }
+    }
+}

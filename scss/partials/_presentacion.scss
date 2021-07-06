@@ -1,4 +1,21 @@
+@use 'display';
+
 .presentacion {
     padding-block-start: 200rem;
     padding-block-end: 50rem;
+    @include display.flex(space-between, center);
+
+   &__item2{
+    text-align: center; // centra la imagen en su espacio
+   }
+   h1{
+       margin-block-start: 0;
+       padding-inline-end: 20rem;
+   }
+
+   p{
+    padding-inline-end: 20rem;
+    padding-block-end: 10rem;
+
+   }
 }

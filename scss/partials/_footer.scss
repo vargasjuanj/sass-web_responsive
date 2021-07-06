@@ -1,0 +1,12 @@
+@use 'color';
+@use 'display';
+
+.footer {
+    min-block-size: 80rem;
+    background-color: color.$oscuro;
+    margin-block-start: 0;
+    @include display.flex(center, center);
+    &__contenido {
+        text-align: center;
+    }
+}

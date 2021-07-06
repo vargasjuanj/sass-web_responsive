@@ -16,6 +16,10 @@
     background-color: $fondo;
 }
 
+/* 
+A diferencia de los extends o funciones, el mixin son propiedades que pueden reciir parametros
+*/
+
 .boton--principal{
     @extend .boton;
     @include color-boton(color.$principal, color.$blanco);

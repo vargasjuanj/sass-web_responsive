@@ -1,5 +1,7 @@
         // USAR CON NODE, SE PUEDE USAR DART SASS, QUE INTEGRA USE Y FORWARD
 
+npm i -g sass
+
 // compilar 
  sass --watch scss/main.scss css/main.css
 
